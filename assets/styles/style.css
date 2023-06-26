@@ -1,0 +1,24 @@
+form {
+    font-family: 'Zen Antique Soft', serif;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 20px solid #9e9e9e3d;
+    padding: 40px;
+    width: 800px;
+    border-radius: 120px;
+    color: #360000;
+}
+.car__brand {
+    width: 150px;
+}
+
+.car__model {
+    width: 150px;
+}
+
+.capacity {
+    width: 150px;
+}

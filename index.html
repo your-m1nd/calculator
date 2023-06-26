@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap"
+      rel="stylesheet"
+    />
+    <title>Калькулятор расчёта стоимости автомобиля</title>
+  </head>
+  <body>
+    <form>
+      <h1>Калькулятор стоимости автомобиля</h1>
+      <label>
+        <h2>Марка и модель автомобиля</h2>
+        <select class="car__brand" name="car__brand">
+          <option value="brand-0">Марка</option>
+          <option value="brand-1">Renault</option>
+          <option value="brand-2">Opel</option>
+          <option value="brand-3">Mazda</option>
+          <option value="brand-4">Jaguar</option>
+        </select>
+        <select class="car__model" name="car__model">
+          <option value="model-0">Модель</option>
+          <option value="model-1">Седан</option>
+          <option value="model-2">Хэтчбэк</option>
+          <option value="model-3">Купе</option>
+          <option value="model-4">Внедорожник</option>
+        </select>
+      </label>
+      <label>
+        <h2>Выбор топлива</h2>
+        <input type="checkbox" />
+        <span>Бензин</span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        <span>Дизель</span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        <span>Электричество</span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        <span>Газ</span>
+      </label>
+      <h2>Объём двигателя, л</h2>
+      <input class="capacity" type="number" max="3.5" min="1.1" step="0.1" />
+      <label>
+        <h2>Состояние автомобиля</h2>
+        <input type="checkbox" />
+        <span>Новый</span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        <span>Подержанный</span>
+        <input type="checkbox" /> количество владельцев
+      </label>
+      <label class="payment">
+        <h2>Способ оплаты</h2>
+        <input type="checkbox" />
+        <span>Оплата банковской картой</span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        <span>Оплата наличными</span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        <span>Оплата через счёт на юр.лицо</span>
+      </label>
+    </form>
+  </body>
+</html>
