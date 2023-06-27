@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/form.css" />
+    <title>Форма регистрации пользователей</title>
+  </head>
+  <body>
+    <div>
+      <form class="form" name="form" novalidate>
+        <h1>Форма регистрации пользователей</h1>
+        <p>Ваше имя:</p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Ваше имя"
+          minlength="2"
+          maxlength="20"
+          required
+        />
+        <p>Адрес эл. почты:</p>
+        <input type="email" name="email" placeholder="Ваш e-mail" required />
+        <p>Укажите Ваш возраст:</p>
+        <input type="number" name="age" placeholder="Ваш возраст" required />
+        <p class="gender">Пол:</p>
+        <p class="gender">
+          <input type="radio" name="gender" value="male" />Мужской
+        </p>
+        <p class="gender">
+          <input type="radio" name="gender" value="female" />Женский
+        </p>
+        <p>Укажите Вашу профессию:</p>
+        <select class="profession" name="profession" required>
+          <option value="option-0"></option>
+          <option value="option-1">Врач</option>
+          <option value="option-2">Программист</option>
+          <option value="option-3">Учитель</option>
+          <option value="option-4">Дизайнер</option>
+          <option value="option-5">Инженер</option>
+          <option value="option-6">Продавец</option>
+          <option value="option-7">Другое</option>
+        </select>
+        <p>Придумайте пароль:</p>
+        <input
+          type="password"
+          placeholder="Введите пароль"
+          name="password"
+          minlength="8"
+          pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/"
+          required
+        />
+        <p>Повторите пароль:</p>
+        <input
+          type="password"
+          placeholder="Повторите пароль"
+          name="password__repeat"
+          minlength="8"
+          pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/"
+          required
+        />
+        <br />
+        <div class="permission">
+          <input
+            type="checkbox"
+            id="politics"
+            onclick="check();"
+            value=""
+            autocomplete="off"
+            required
+          />
+          <p>
+            Согласие на обработку персональных данных
+            <a href="https://www.skolkovo.ru/static/personaldata_rus.html"></a>
+          </p>
+        </div>
+        <br />
+        <button type="submit" onclick="checkAll()">Отправить</button>
+        <div id="errorsInfo"></div>
+      </form>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
