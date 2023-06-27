@@ -41,8 +41,9 @@ function check() {
     }
 
 let form = document.forms.form;
+let button = document.getElementsByTagName('button');
 
-form.addEventListener('submit', function (evt) {
+button.addEventListener('submit', function (evt) {
     evt.preventDefault();
 
     //Очищаем все поля form.reset();
