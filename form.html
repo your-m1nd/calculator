@@ -58,7 +58,12 @@
         </p>
         <span id="spanName4"></span>
         <p>Укажите Вашу профессию:</p>
-        <select class="profession" name="profession" required>
+        <select
+          id="profession"
+          name="profession"
+          onchange="checkProfession(this.value)"
+          required
+        >
           <option value="option-0"></option>
           <option value="option-1">Врач</option>
           <option value="option-2">Программист</option>
@@ -68,6 +73,7 @@
           <option value="option-6">Продавец</option>
           <option value="option-7">Другое</option>
         </select>
+        <span id="spanName5"></span>
         <p>Придумайте пароль:</p>
         <input
           id="inputPassword"
@@ -79,7 +85,7 @@
           required
           onkeyup="checkPassword(this.value)"
         />
-        <span id="spanName5"></span>
+        <span id="spanName6"></span>
         <p>Повторите пароль:</p>
         <input
           id="inputPassword"
@@ -91,7 +97,7 @@
           required
           onkeyup="checkPassword(this.value)"
         />
-        <span id="spanName6"></span>
+        <span id="spanName7"></span>
         <br />
         <div class="permission">
           <input

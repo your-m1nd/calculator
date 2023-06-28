@@ -47,6 +47,21 @@ function checkAge(number) {
     }
    }
     
+//проверка Профессии
+
+function checkProfession() {
+let select = document.querySelector('profession');
+let selectedValue = select.value;
+
+//var selectedValue = select.options[select.selectedIndex].value;
+//if (select.value = 'option-1') {
+   // select.classList.add('error');
+   // let spanName5 = document.getElementById('spanName5');
+   // spanName5.outerHTML = 'Профессия не выбрана';
+//}
+}
+
+
 
 //проверка пароля
 
@@ -58,10 +73,10 @@ if (inputPassword.value.match(passwordFormat)) {
 }
 else {
     inputPassword.classList.add('error');
-    let spanName5 = document.getElementById('spanName5');
-        spanName5.outerHTML = 'Неверный формат пароля';
     let spanName6 = document.getElementById('spanName6');
-    spanName6.outerHTML = 'Неверный формат пароля';
+        spanName6.outerHTML = 'Неверный формат пароля';
+    let spanName7 = document.getElementById('spanName7');
+    spanName7.outerHTML = 'Неверный формат пароля';
 }
 }
 
