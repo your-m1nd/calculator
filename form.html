@@ -18,24 +18,45 @@
         <h1>Форма регистрации пользователей</h1>
         <p>Ваше имя:</p>
         <input
+          id="inputName"
           type="text"
           name="name"
-          placeholder="Ваше имя"
+          placeholder="Имя"
           minlength="2"
           maxlength="20"
           required
+          onkeyup="checkName(this.value)"
         />
+        <span id="spanName1"></span>
         <p>Адрес эл. почты:</p>
-        <input type="email" name="email" placeholder="Ваш e-mail" required />
+        <input
+          id="inputEmail"
+          type="email"
+          name="email"
+          placeholder="e-mail"
+          pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i"
+          required
+          onkeyup="checkMail(this.value)"
+        />
+        <span id="spanName2"></span>
         <p>Укажите Ваш возраст:</p>
-        <input type="number" name="age" placeholder="Ваш возраст" required />
+        <input
+          id="inputAge"
+          type="number"
+          name="age"
+          placeholder="Возраст"
+          required
+          onkeyup="checkAge(this.value)"
+        />
+        <span id="spanName3"></span>
         <p class="gender">Пол:</p>
         <p class="gender">
-          <input type="radio" name="gender" value="male" />Мужской
+          <input type="radio" name="gender" onchange="checkGender()" />Мужской
         </p>
         <p class="gender">
-          <input type="radio" name="gender" value="female" />Женский
+          <input type="radio" name="gender" onchange="checkGender()" />Женский
         </p>
+        <span id="spanName4"></span>
         <p>Укажите Вашу профессию:</p>
         <select class="profession" name="profession" required>
           <option value="option-0"></option>
@@ -49,22 +70,28 @@
         </select>
         <p>Придумайте пароль:</p>
         <input
+          id="inputPassword"
           type="password"
-          placeholder="Введите пароль"
+          placeholder="Пароль"
           name="password"
           minlength="8"
           pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/"
           required
+          onkeyup="checkPassword(this.value)"
         />
+        <span id="spanName5"></span>
         <p>Повторите пароль:</p>
         <input
+          id="inputPassword"
           type="password"
           placeholder="Повторите пароль"
-          name="password__repeat"
+          name="new-password"
           minlength="8"
           pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/"
           required
+          onkeyup="checkPassword(this.value)"
         />
+        <span id="spanName6"></span>
         <br />
         <div class="permission">
           <input
@@ -81,7 +108,7 @@
           </p>
         </div>
         <br />
-        <button type="submit" onclick="checkAll()">Отправить</button>
+        <button type="submit" onclick="">Отправить</button>
         <div id="errorsInfo"></div>
       </form>
     </div>

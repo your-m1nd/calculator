@@ -11,6 +11,12 @@
 h1{
     font-size: 16px;
 }
+
+#spanName1, #spanName2, #spanName3, #spanName4, #spanName5, #spanName6 {
+  display: none;
+}
+
+
 .gender {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -26,6 +32,11 @@ input {
 input:required:valid {
     border: 2px solid green;
   }
+
+.error {
+  border: 2px solid red;
+}
+
 
   select {
     width: 170px;
